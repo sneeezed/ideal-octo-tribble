@@ -10,6 +10,9 @@
     },
     "Cube.001": {
       "GeometryNodes": "rotate instances"
+    },
+    "Cube.002": {
+      "GeometryNodes": "michealnodes"
     }
   },
   "version": 1
