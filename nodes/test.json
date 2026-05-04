@@ -1,0 +1,200 @@
+{
+  "schema_version": "1.0",
+  "name": "test",
+  "type": "GeometryNodeTree",
+  "interface": [
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "OUTPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    },
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "INPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Group Input",
+      "label": "",
+      "bl_idname": "NodeGroupInput",
+      "location": [
+        -340.0,
+        0.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [],
+      "outputs": [
+        {
+          "identifier": "Socket_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Group Output",
+      "label": "",
+      "bl_idname": "NodeGroupOutput",
+      "location": [
+        200.0,
+        0.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Socket_1",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "Subdivision Surface",
+      "label": "",
+      "bl_idname": "GeometryNodeSubdivisionSurface",
+      "location": [
+        -77.27202606201172,
+        25.93914794921875
+      ],
+      "width": 150.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {
+        "uv_smooth": "PRESERVE_BOUNDARIES",
+        "boundary_smooth": "ALL"
+      },
+      "inputs": [
+        {
+          "identifier": "Mesh",
+          "name": "Mesh",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Level",
+          "name": "Level",
+          "socket_type": "NodeSocketInt",
+          "default_value": 1,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Edge Crease",
+          "name": "Edge Crease",
+          "socket_type": "NodeSocketFloatFactor",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Vertex Crease",
+          "name": "Vertex Crease",
+          "socket_type": "NodeSocketFloatFactor",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Limit Surface",
+          "name": "Limit Surface",
+          "socket_type": "NodeSocketBool",
+          "default_value": true,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Mesh",
+          "name": "Mesh",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from_node": "Subdivision Surface",
+      "from_socket_identifier": "Mesh",
+      "from_socket_name": "Mesh",
+      "to_node": "Group Output",
+      "to_socket_identifier": "Socket_1",
+      "to_socket_name": "Geometry"
+    },
+    {
+      "from_node": "Group Input",
+      "from_socket_identifier": "Socket_0",
+      "from_socket_name": "Geometry",
+      "to_node": "Subdivision Surface",
+      "to_socket_identifier": "Mesh",
+      "to_socket_name": "Mesh"
+    }
+  ],
+  "is_modifier": true,
+  "is_tool": false
+}
