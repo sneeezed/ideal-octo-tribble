@@ -7,6 +7,9 @@
   "modifier_links": {
     "Cube": {
       "GeometryNodes": "test"
+    },
+    "Cube.001": {
+      "GeometryNodes": "rotate instances"
     }
   },
   "version": 1
