@@ -464,6 +464,134 @@
           "hide_value": false
         }
       ]
+    },
+    {
+      "name": "Simulation Input",
+      "label": "",
+      "bl_idname": "GeometryNodeSimulationInput",
+      "location": [
+        -61.329010009765625,
+        53.663177490234375
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Item_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Delta Time",
+          "name": "Delta Time",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Item_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Simulation Output",
+      "label": "",
+      "bl_idname": "GeometryNodeSimulationOutput",
+      "location": [
+        238.67098999023438,
+        53.663177490234375
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Skip",
+          "name": "Skip",
+          "socket_type": "NodeSocketBool",
+          "default_value": false,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Item_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Item_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
     }
   ],
   "links": [
@@ -473,6 +601,14 @@
       "from_socket_name": "Geometry",
       "to_node": "Group Output",
       "to_socket_identifier": "Socket_1",
+      "to_socket_name": "Geometry"
+    },
+    {
+      "from_node": "Simulation Input",
+      "from_socket_identifier": "Item_0",
+      "from_socket_name": "Geometry",
+      "to_node": "Simulation Output",
+      "to_socket_identifier": "Item_0",
       "to_socket_name": "Geometry"
     }
   ],
