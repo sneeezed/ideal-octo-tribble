@@ -285,6 +285,185 @@
           "hide_value": false
         }
       ]
+    },
+    {
+      "name": "Attribute Statistic",
+      "label": "",
+      "bl_idname": "GeometryNodeAttributeStatistic",
+      "location": [
+        -83.372802734375,
+        348.0743408203125
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {
+        "data_type": "FLOAT",
+        "domain": "POINT"
+      },
+      "inputs": [
+        {
+          "identifier": "Geometry",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Selection",
+          "name": "Selection",
+          "socket_type": "NodeSocketBool",
+          "default_value": true,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Attribute",
+          "name": "Attribute",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": true
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Mean",
+          "name": "Mean",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Median",
+          "name": "Median",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Sum",
+          "name": "Sum",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Min",
+          "name": "Min",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Max",
+          "name": "Max",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Range",
+          "name": "Range",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Standard Deviation",
+          "name": "Standard Deviation",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Variance",
+          "name": "Variance",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Linear Gizmo",
+      "label": "",
+      "bl_idname": "GeometryNodeGizmoLinear",
+      "location": [
+        280.4546813964844,
+        351.19744873046875
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Value",
+          "name": "Value",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Position",
+          "name": "Position",
+          "socket_type": "NodeSocketVectorTranslation",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Direction",
+          "name": "Direction",
+          "socket_type": "NodeSocketVectorXYZ",
+          "default_value": [
+            0.0,
+            0.0,
+            1.0
+          ],
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Transform",
+          "name": "Transform",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
     }
   ],
   "links": [
